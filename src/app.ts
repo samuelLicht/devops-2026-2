@@ -8,10 +8,14 @@ export function createApp() {
 
   app.use(cors());
   app.use(express.json());
-
-  app.get("/health", (_req, res) => {
-    res.json({ status: "ok", service: "express-ts-api" });
+  
+app.get("/health", (_req, res) => {
+  res.json({
+    status: "ok",
+    service: "express-ts-api-SamuelDiaz",
+    version: "1.1.0"
   });
+});
 
   app.use("/api/postgres", postgresRouter);
   app.use("/api/mongo", mongoRouter);
