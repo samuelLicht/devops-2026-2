@@ -8,9 +8,16 @@
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "benchmark:service": "node scripts/service-benchmark.mjs",
+    "timing:startup": "node scripts/startup-timing.mjs"
   },
-  "keywords": ["express", "typescript", "postgresql", "mongodb"],
+  "keywords": [
+    "express",
+    "typescript",
+    "postgresql",
+    "mongodb"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
